@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
-import data from "./data.json";
 import React, {useState} from 'react';
 import ToDoList from "./ToDoList";
 import ToDoForm from './ToDoForm';
@@ -11,7 +9,7 @@ function App() {
 
   const handleToggle = (id) => {
     let mapped = toDoList.map(task => {
-      return task.id == id ? { ...task, complete: !task.complete } : { ...task};
+      return task.id === id ? { ...task, complete: !task.complete } : { ...task};
     });
     setToDoList(mapped);
   }
