@@ -7,6 +7,7 @@ import ChooseList from "./components/ChooseList";
 
 function App() {
   const [toDoList, setToDoList] = useState([]);
+  const [toggleStatus, setToggleStatus] = useState("Active");
 
   const handleToggle = (id) => {
     let mapped = toDoList.map((task) => {
@@ -15,13 +16,6 @@ function App() {
         : { ...task };
     });
     setToDoList(mapped);
-  };
-
-  const handleFilter = () => {
-    let filtered = toDoList.filter((task) => {
-      return !task.complete;
-    });
-    setToDoList(filtered);
   };
 
   const addTask = (userInput) => {
@@ -36,11 +30,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ChooseList />
+      <ChooseList toDoList={toDoList} setToggleStatus={setToggleStatus} />
       <ToDoList
         toDoList={toDoList}
         handleToggle={handleToggle}
-        handleFilter={handleFilter}
+        toggleStatus={toggleStatus}
       />
       <ToDoForm addTask={addTask} />
     </div>

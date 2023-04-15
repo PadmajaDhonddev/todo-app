@@ -1,22 +1,21 @@
 import React from "react";
-
+import "./ToDo.css";
 const ToDo = ({ todo, handleToggle }) => {
-  const handleClick = (e) => {
-    e.preventDefault();
+  const onCheckBoxClick = (todo, e) => {
+    todo.complete = !todo.complete;
     handleToggle(e.currentTarget.id);
   };
-
   return (
-    <div
-      id={todo.id}
-      key={todo.id + todo.task}
-      name="todo"
-      value={todo.id}
-      onClick={(e) => handleClick(e)}
-      className={todo.complete ? "todo strike" : "todo"}
-    >
-      <input value={todo.task} checked={todo.complete} type="checkbox" />
-      {todo.task}
+    <div>
+      <input
+        id={todo.id}
+        key={todo.id + todo.task}
+        value={todo.task}
+        checked={todo.complete}
+        type="checkbox"
+        onChange={(e) => onCheckBoxClick(todo, e)}
+      />
+      <span className={`${todo.complete ? "complete" : ""}`}>{todo.task}</span>
     </div>
   );
 };
