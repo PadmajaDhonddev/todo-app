@@ -1,0 +1,7 @@
+.Tasks {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
