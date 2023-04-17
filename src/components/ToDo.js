@@ -7,7 +7,9 @@ const ToDo = ({ todo, handleToggle }) => {
   };
   return (
     <div>
+      <br></br>
       <input
+        className="ToDoItem"
         value={todo.task}
         checked={todo.complete}
         type="checkbox"

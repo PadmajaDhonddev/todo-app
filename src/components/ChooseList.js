@@ -15,7 +15,8 @@ const ChooseList = ({ toDoList, setToggleStatus }) => {
           }}
           tabIndex={0}
         >
-          {tasktype}
+          <br></br>
+          <h1>{tasktype}</h1>
         </div>
       ))}
     </div>

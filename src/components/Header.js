@@ -1,11 +1,14 @@
 import React from "react";
+import "./Header.css";
 
-const Header = ()=>{
-    return (
-        <header>
-            <h1>My To Do list</h1>
-        </header>
-    );
+const Header = () => {
+  return (
+    <header>
+      <u>
+        <b>My To Do List</b>
+      </u>
+    </header>
+  );
 };
 
 export default Header;

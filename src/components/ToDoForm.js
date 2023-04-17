@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ToDoForm.css";
 
 const ToDoForm = ({ addTask }) => {
   const [userInput, setUserInput] = useState("");
@@ -16,7 +17,10 @@ const ToDoForm = ({ addTask }) => {
   };
   return (
     <form onSubmit={handleSubmit}>
+      <br></br>
+      <br></br>
       <input
+        class="textInput"
         value={userInput}
         type="text"
         onChange={handleChange}

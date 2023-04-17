@@ -1,3 +1,7 @@
 .complete {
   color: gray;
 }
+.ToDoItem {
+  justify-content: left;
+  align-items: flex-start;
+}
