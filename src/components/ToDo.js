@@ -8,8 +8,6 @@ const ToDo = ({ todo, handleToggle }) => {
   return (
     <div>
       <input
-        id={todo.id}
-        key={todo.id + todo.task}
         value={todo.task}
         checked={todo.complete}
         type="checkbox"
