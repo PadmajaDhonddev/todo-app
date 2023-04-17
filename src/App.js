@@ -19,12 +19,10 @@ function App() {
   };
 
   const addTask = (userInput) => {
-    let copy = [...toDoList];
-    copy = [
-      ...copy,
+    setToDoList([
+      ...toDoList,
       { id: toDoList.length + 1, task: userInput, complete: false },
-    ];
-    setToDoList(copy);
+    ]);
   };
 
   return (
