@@ -10,7 +10,7 @@ function App() {
   const [toggleStatus, setToggleStatus] = useState("Active");
 
   const handleToggle = (id) => {
-    let mapped = toDoList.map((task) => {
+    const mapped = toDoList.map((task) => {
       return task.id === id
         ? { ...task, complete: !task.complete }
         : { ...task };
